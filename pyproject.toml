@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "algorithm-foundry"
+version = "0.1.0"
+description = "An AI-driven framework for automated algorithm discovery, evaluation, and optimization across computational problem domains."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = "MIT"
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "scikit-learn",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
